@@ -14,10 +14,19 @@ jQuery('.demo-icon').click(function() {
 });
 
 //p-scroll bar
-const ps5 = new PerfectScrollbar('.sidebar-right1', {
+/* const ps5 = new PerfectScrollbar('.sidebar-right1', {
     useBothWheelAxes: true,
     suppressScrollX: true,
-});
+}); */
+(function() {
+    const el = document.querySelector('.sidebar-right1');
+    if (el) {
+        new PerfectScrollbar(el, {
+            useBothWheelAxes: true,
+            suppressScrollX: true,
+        });
+    }
+})();
 
 
 // Switcher Close //

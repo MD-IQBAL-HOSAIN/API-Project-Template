@@ -31,7 +31,7 @@
 
 {{-- toastr start --}}
 <style>
-    @import url('/public/backend/custom_downloaded_file/css2.css');
+    /* @import url('/public/backend/custom_downloaded_file/css2.css'); */
 
     #btnSuccess {
         background-color: #1bc5bd;

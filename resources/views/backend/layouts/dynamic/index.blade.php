@@ -119,10 +119,10 @@
                     ],
                 });
 
-                dTable.buttons().container().appendTo('#file_exports');
+                /* dTable.buttons().container().appendTo('#file_exports');
                 new DataTable('#example', {
                     responsive: true
-                });
+                }); */
             }
         });
 
