@@ -26,27 +26,6 @@ Route::middleware([AdminMiddleware::class])->group(function () {
 
     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
 
-
-    //route for tax
-Route::controller(TaxController::class)->group(function () {
-    Route::get('taxes', 'index')->name('taxes.index');
-    Route::get('taxes/create', 'create')->name('taxes.create');
-    Route::post('taxes/store', 'store')->name('taxes.store');
-    Route::get('taxes/edit/{id}', 'edit')->name('taxes.edit');
-    Route::post('taxes/update/{id}', 'update')->name('taxes.update');
-    Route::delete('taxes/del/{id}', 'destroy')->name('taxes.destroy');
-    Route::get('taxes/status/{id}', 'status')->name('taxes.status');
-});
-
-//route for orders
-Route::controller(OrderController::class)->group(function () {
-    Route::get('/orders/list', 'index')->name('orders.index');
-    Route::get('/orders/single/details/{id}', 'details')->name('orders.details');
-    Route::get('/orders/show/{id}', 'show')->name('orders.show');
-    Route::post('/orders/status/{id}', 'changeStatus')->name('orders.status');
-
-});
-
 //route for Banner
 Route::controller(CmsController::class)->group(function () {
     Route::get('/banner/list', 'index')->name('banner.index');
@@ -66,8 +45,8 @@ Route::controller(DynamicPageController::class)->group(function () {
     Route::post('/dynamic/update/{id}', 'update')->name('dynamic.update');
     Route::get('/dynamic/status/{id}', 'status')->name('dynamic.status');
 });
-   
-    
+
+
     //! Route for Profile Settings
     Route::controller(ProfileController::class)->group(function () {
         Route::get('/profile', 'index')->name('profile.setting');
@@ -75,26 +54,26 @@ Route::controller(DynamicPageController::class)->group(function () {
         Route::put('/update-profile-password', 'UpdatePassword')->name('update.Password');
         Route::post('/update-profile-picture', 'UpdateProfilePicture')->name('update.profile.picture');
     });
-    
+
     //! Route for System Settings
     Route::controller(SystemSettingController::class)->group(function () {
         Route::get('/system-setting', 'index')->name('system.index');
         Route::patch('/system-setting', 'update')->name('system.update');
     });
-    
+
     //! Route for Mail Settings
     Route::controller(MailSettingController::class)->group(function () {
         Route::get('/mail-setting', 'index')->name('mail.setting');
         Route::patch('/mail-setting', 'update')->name('mail.update');
     });
-    
+
     //! Route for Stripe Settings
     Route::controller(StripeSettingController::class)->group(function () {
         Route::get('/stripe-setting', 'index')->name('stripe.index');
         Route::get('/google-setting', 'google')->name('google.index');
         Route::patch('/credentials-setting', 'update')->name('credentials.update');
     });
-    
+
     //! Route for Stripe Settings
     Route::controller(MapSettingController::class)->group(function () {
         Route::get('/map-setting', 'index')->name('map.index');
