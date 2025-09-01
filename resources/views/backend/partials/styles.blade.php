@@ -1,10 +1,10 @@
-{{-- @php
+@php
     $systemSetting = App\Models\SystemSetting::first();
-@endphp --}}
+@endphp
 
 {{-- FAVICON --}}
-{{-- <link rel="shortcut icon" type="image/x-icon"
-    href="{{ isset($systemSetting->favicon) && !empty($systemSetting->favicon) ? asset($systemSetting->favicon) : asset('frontend/logo.svg') }}" /> --}}
+<link rel="shortcut icon" type="image/x-icon"
+    href="{{ optional($systemSetting)->favicon ? asset($systemSetting->favicon) : (file_exists(public_path('eVento_logo.png')) ? asset('eVento_logo.png') : '') }}" />
 
 {{-- BOOTSTRAP CSS --}}
 <link id="style" href="{{ asset('backend/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />

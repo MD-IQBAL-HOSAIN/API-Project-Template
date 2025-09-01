@@ -11,11 +11,7 @@
 <script src="{{ asset('backend/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('backend/plugins/datatable/js/dataTables.bootstrap5.js') }}"></script>
 <script src="{{ asset('backend/plugins/datatable/js/dataTables.buttons.min.js') }}"></script>
-{{-- <script src="{{ asset('backend/plugins/datatable/js/butsns.bootstrap5.min.js') }}"></script> --}}
-{{-- <script src="{{ asset('backend/plugins/datatable/js/jszip.min.js') }}"></script>
-<script src="{{ asset('backend/plugins/datatable/pdfmake/pdfmake.min.js') }}"></script>
-<script src="{{ asset('backend/plugins/datatable/pdfmake/vfs_fonts.js') }}"></script> --}}
-{{-- <script src="{{ asset('backend/plugins/datatable/js/butsns.html5.min.js') }}"></script> --}}
+
 <script src="{{ asset('backend/plugins/datatable/js/buttons.print.min.js') }}"></script>
 <script src="{{ asset('backend/plugins/datatable/js/buttons.colVis.min.js') }}"></script>
 <script src="{{ asset('backend/plugins/datatable/dataTables.responsive.min.js') }}"></script>
@@ -31,10 +27,6 @@
 
 {{-- STICKY JS --}}
 <script src="{{ asset('backend/js/sticky.js') }}"></script>
-
-<!-- ECHART JS -->
-{{-- <script src="{{ asset('backend/plugins/echarts/echarts.js') }}"></script>
-<script src="{{ asset('backend/js/echarts.js') }}"></script> --}}
 
 {{-- INTERNAL Summernote Editor js --}}
 <script src="{{ asset('backend/plugins/summernote-editor/summernote1.js') }}"></script>
@@ -64,7 +56,6 @@
     feather.replace(); // replace all icons with svg
 </script>
 
-{{-- <script src="{{ asset('backend/js/formelementadvnced.js') }}"></script> --}}
 
 {{-- CHART-CIRCLE JS --}}
 <script src="{{ asset('backend/plugins/circle-progress/circle-progress.min.js') }}"></script>

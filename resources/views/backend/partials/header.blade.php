@@ -1,12 +1,16 @@
 <!-- app-Header -->
+@php
+    $systemSetting = App\Models\SystemSetting::first();
+@endphp
+
 <div class="app-header header sticky">
     <div class="container-fluid main-container">
         <div class="d-flex">
             <a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-bs-toggle="sidebar" href="#"></a>
             <!-- sidebar-toggle-->
             <a class="logo-horizontal " href="{{ route('dashboard') }}">
-                <img src="{{ asset('frontend/eVento_logo.png') }}" class="header-brand-img desktop-logo" alt="logo">
-                <img src="{{ asset('frontend/eVento_logo.png') }}" class="header-brand-img light-logo1" alt="logo">
+                <img src="{{ optional($systemSetting)->logo ? asset($systemSetting->logo) : (file_exists(public_path('eVento_logo.png')) ? asset('eVento_logo.png') : '') }}" class="header-brand-img desktop-logo" alt="logo">
+                <img src="{{ optional($systemSetting)->logo ? asset($systemSetting->logo) : (file_exists(public_path('eVento_logo.png')) ? asset('eVento_logo.png') : '') }}" class="header-brand-img light-logo1" alt="logo">
             </a>
             <!-- LOGO -->
             <div class="d-flex order-lg-2 ms-auto header-right-icons">
