@@ -66,7 +66,7 @@
 
         input:focus {
             outline: none;
-            border-color: #4CAF50;
+            border-color: #008B8B;
             box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
         }
 
@@ -74,7 +74,7 @@
             width: 100%;
             padding: 12px;
             border: none;
-            background: #4CAF50;
+            background: #008B8B;
             color: white;
             font-size: 16px;
             border-radius: 5px;
